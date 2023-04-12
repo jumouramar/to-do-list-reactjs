@@ -1,0 +1,25 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.header strong:nth-child(1) {
+    color: var(--pink);
+}
+
+.header strong:nth-child(2) {
+    color: var(--blue);
+}
+
+.header strong:nth-child(3) {
+    color: var(--purple-dark);
+}
+
+.header strong:nth-child(4) {
+    color: var(--green);
+}
