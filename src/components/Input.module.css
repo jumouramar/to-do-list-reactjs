@@ -1,0 +1,27 @@
+.inputForm {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    margin-top: calc(0px - 1.5rem);
+}
+
+.inputForm > textarea {
+    width: 32rem;
+    height: 3.375rem;
+    padding: 1rem;
+
+    background: var(--gray-500);
+    color: var(--gray-300);
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+.inputForm > textarea:focus {
+    color: var(--gray-100);
+    border: 1px solid var(--purple-dark);
+}
