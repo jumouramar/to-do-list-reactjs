@@ -1,0 +1,39 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.info {
+    max-width: 736px;
+    display: flex;
+    gap: 23rem;    
+    align-items: center;
+    color: var(--gray-200);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.info div {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.info div p {
+    background: var(--gray-400);
+    padding: 2px 8px;
+    border: 0;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.createdTasks strong {
+    color: var(--blue);
+}
+
+.completedTasks strong {
+    color: var(--purple);
+}
