@@ -1,4 +1,5 @@
 import styles from "./List.module.css"
+import { Task } from "./Task"
 import { ClipboardText } from "phosphor-react"
 
 export function List() {
@@ -19,7 +20,9 @@ export function List() {
                 <strong>Você ainda não tem tarefas cadastradas</strong>
                 <p>Crie tarefas e organize seus itens a fazer</p>
             </div>
-            <div className={styles.list}></div>
+            <div className={styles.list}>
+                <Task />
+            </div>
         </div>
     )
 }
