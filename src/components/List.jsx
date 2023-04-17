@@ -15,7 +15,7 @@ export function List() {
                 </div>
             </div>
             <div className={styles.listEmpty}>
-                <ClipboardText />
+                <ClipboardText size={56} color="#3D3D3D" weight="thin" />
                 <strong>Você ainda não tem tarefas cadastradas</strong>
                 <p>Crie tarefas e organize seus itens a fazer</p>
             </div>

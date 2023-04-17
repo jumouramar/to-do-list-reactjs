@@ -37,3 +37,26 @@
 .completedTasks strong {
     color: var(--purple);
 }
+
+.listEmpty {
+    width: 100%;
+    max-width: 736px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.5rem 0;
+    padding: 4rem 0;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+
+    line-height: 140%;
+}
+
+.listEmpty strong {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
