@@ -1,9 +1,9 @@
 import { Button } from "./Button"
 import styles from "./Input.module.css"
 
-export function Input() {
+export function Input({submit}) {
     return (
-        <form className={styles.inputForm}>
+        <form onSubmit={submit} className={styles.inputForm}>
             <textarea placeholder="Adicione uma nova tarefa"></textarea> 
             <Button />
         </form>
