@@ -10,7 +10,8 @@ export function App() {
 
   function handleAddNewTask() {
     event.preventDefault()
-    setTasks([...tasks, tasks.length +1])
+    const taskText = event.target.taskName.value
+    setTasks([...tasks, taskText])
   }
 
   return (

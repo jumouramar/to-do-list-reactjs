@@ -22,8 +22,8 @@ export function List({tasks}) {
             </div>
 
             <div className={styles.list}>
-                {tasks.map(() => {
-                    return <Task />
+                {tasks.map(task => {
+                    return <Task content={task} />
                 })}
             </div>
 
