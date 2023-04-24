@@ -2,17 +2,21 @@ import styles from "./List.module.css"
 import { Task } from "./Task"
 import { ClipboardText } from "phosphor-react"
 
-export function List({ tasks, propDeleteTask}) {
+export function List({ tasks, propDeleteTask, tasksNumber }) {
     return(
         <div className={styles.tasks}>
             <div className={styles.info}>
                 <div className={styles.createdTasks}>
                     <strong>Tarefas criadas</strong>
-                    <p>0</p>
+                    <p>{tasksNumber}</p>
                 </div>
                 <div className={styles.completedTasks}>
                     <strong>Concluídas</strong>
-                    <p>0</p>
+                    { tasks.length == 0 ?
+                        (<p>0</p>)
+                        :
+                        (<p>0 de {tasksNumber}</p>)
+                    }
                 </div>
             </div>
             { tasks.length == 0 ?

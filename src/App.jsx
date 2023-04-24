@@ -5,6 +5,7 @@ import { List } from "./components/List"
 import { useState } from "react"
 
 export function App() {
+  const [tasksNumber, setTasksNumber] = useState(0)
 
   const [tasks, setTasks] = useState([])
 
@@ -14,6 +15,7 @@ export function App() {
     event.preventDefault()
     setTasks([...tasks, newTaskText])
     setNewTaskText('')
+    setTasksNumber(tasksNumber+1)
   }
 
   function handleNewTaskText() {
@@ -25,6 +27,7 @@ export function App() {
       return task != taskToDelete
     })
     setTasks(tasksWithoutDeletedOne)
+    setTasksNumber(tasksNumber-1)
   }
 
   return (
@@ -38,6 +41,7 @@ export function App() {
       <List 
         tasks={tasks}
         propDeleteTask={deleteTask}
+        tasksNumber={tasksNumber}
       />
     </div>
   )
