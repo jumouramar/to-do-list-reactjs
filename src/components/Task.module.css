@@ -29,8 +29,10 @@
 }
 
 .trash {
+    background: var(--gray-500);
     color: var(--gray-300);
     cursor: pointer;
+    border: 0;
     border-radius: 8px;
     padding: 5px 6px 1px;
 }

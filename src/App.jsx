@@ -20,6 +20,13 @@ export function App() {
     setNewTaskText(event.target.value)
   }
 
+  function deleteTask(taskToDelete){
+    const tasksWithoutDeletedOne = tasks.filter(task => {
+      return task != taskToDelete
+    })
+    setTasks(tasksWithoutDeletedOne)
+  }
+
   return (
     <div>
       <Header />
@@ -28,7 +35,10 @@ export function App() {
         propNewTaskText={newTaskText} 
         propHandleNewTaskText={handleNewTaskText} 
       />
-      <List tasks={tasks} />
+      <List 
+        tasks={tasks}
+        propDeleteTask={deleteTask}
+      />
     </div>
   )
 }

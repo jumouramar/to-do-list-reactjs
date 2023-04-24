@@ -2,7 +2,7 @@ import styles from "./List.module.css"
 import { Task } from "./Task"
 import { ClipboardText } from "phosphor-react"
 
-export function List({tasks}) {
+export function List({ tasks, propDeleteTask}) {
     return(
         <div className={styles.tasks}>
             <div className={styles.info}>
@@ -23,7 +23,7 @@ export function List({tasks}) {
 
             <div className={styles.list}>
                 {tasks.map(task => {
-                    return <Task key={task} content={task} />
+                    return <Task key={task} content={task} propDeleteTask={propDeleteTask} />
                 })}
             </div>
 
