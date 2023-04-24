@@ -19,7 +19,9 @@ export function Task({ content, propDeleteTask, propCompletedTasksNumber, propSe
 
     function handleDeleteTask() {
         propDeleteTask(content)
-        propSetCompletedTasksNumber(propCompletedTasksNumber-1)
+        if(isChecked == true){
+           propSetCompletedTasksNumber(propCompletedTasksNumber-1) 
+        }
     }
 
     return (
