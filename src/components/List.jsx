@@ -15,18 +15,19 @@ export function List({ tasks, propDeleteTask}) {
                     <p>0</p>
                 </div>
             </div>
-            <div className={styles.listEmpty}>
-                <ClipboardText size={56} color="#3D3D3D" weight="thin" />
-                <strong>Você ainda não tem tarefas cadastradas</strong>
-                <p>Crie tarefas e organize seus itens a fazer</p>
-            </div>
-
-            <div className={styles.list}>
-                {tasks.map(task => {
-                    return <Task key={task} content={task} propDeleteTask={propDeleteTask} />
-                })}
-            </div>
-
+            { tasks.length == 0 ?
+                (<div className={styles.listEmpty}>
+                    <ClipboardText size={56} color="#3D3D3D" weight="thin" />
+                    <strong>Você ainda não tem tarefas cadastradas</strong>
+                    <p>Crie tarefas e organize seus itens a fazer</p>
+                </div>)
+            :
+                (<div className={styles.list}>
+                    {tasks.map(task => {
+                        return <Task key={task} content={task} propDeleteTask={propDeleteTask} />
+                    })}
+                </div>) 
+            }
         </div>
     )
 }
