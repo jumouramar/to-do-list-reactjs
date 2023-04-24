@@ -12,6 +12,7 @@ export function App() {
     event.preventDefault()
     const taskText = event.target.taskName.value
     setTasks([...tasks, taskText])
+    event.target.taskName.value = ''
   }
 
   return (
