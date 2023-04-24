@@ -9,8 +9,9 @@ export function Input({propSubmit, propNewTaskText, propHandleNewTaskText}) {
                 placeholder="Adicione uma nova tarefa"
                 value={propNewTaskText}
                 onChange={propHandleNewTaskText}
+                required
             />
-            <Button />
+            <Button propNewTaskText={propNewTaskText}/>
         </form>
     )
 }

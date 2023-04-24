@@ -12,6 +12,11 @@
     transition: .5s;
 }
 
-.createButton:hover {
+.createButton:hover:not(:disabled) {
     background: var(--blue);
+}
+
+.createButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
