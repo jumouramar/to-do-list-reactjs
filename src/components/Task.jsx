@@ -2,16 +2,24 @@ import { useState } from "react"
 import styles from "./Task.module.css"
 import { Trash } from "phosphor-react"
 
-export function Task({ content, propDeleteTask }) {
+export function Task({ content, propDeleteTask, propCompletedTasksNumber, propSetCompletedTasksNumber }) {
 
     const [isChecked, setIsChecked] = useState(false)
 
     function handleIsChecked() {
         setIsChecked(!isChecked)
+        if(isChecked == false) {
+           propSetCompletedTasksNumber(propCompletedTasksNumber+1) 
+        }
+        else {
+            propSetCompletedTasksNumber(propCompletedTasksNumber-1)
+        }
+        
     }
 
     function handleDeleteTask() {
         propDeleteTask(content)
+        propSetCompletedTasksNumber(propCompletedTasksNumber-1)
     }
 
     return (

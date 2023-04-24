@@ -1,8 +1,12 @@
+import { useState } from "react"
 import styles from "./List.module.css"
 import { Task } from "./Task"
 import { ClipboardText } from "phosphor-react"
 
 export function List({ tasks, propDeleteTask, tasksNumber }) {
+
+    const [completedTasksNumber, setCompletedTasksNumber] = useState(0)
+
     return(
         <div className={styles.tasks}>
             <div className={styles.info}>
@@ -15,7 +19,7 @@ export function List({ tasks, propDeleteTask, tasksNumber }) {
                     { tasks.length == 0 ?
                         (<p>0</p>)
                         :
-                        (<p>0 de {tasksNumber}</p>)
+                        (<p>{completedTasksNumber} de {tasksNumber}</p>)
                     }
                 </div>
             </div>
@@ -28,7 +32,12 @@ export function List({ tasks, propDeleteTask, tasksNumber }) {
             :
                 (<div className={styles.list}>
                     {tasks.map(task => {
-                        return <Task key={task} content={task} propDeleteTask={propDeleteTask} />
+                        return <Task 
+                            key={task} 
+                            content={task} 
+                            propDeleteTask={propDeleteTask} propCompletedTasksNumber={completedTasksNumber}
+                            propSetCompletedTasksNumber={setCompletedTasksNumber}
+                            />
                     })}
                 </div>) 
             }
