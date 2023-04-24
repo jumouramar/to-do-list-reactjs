@@ -28,6 +28,11 @@
     opacity: .5;
 }
 
+.cross {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
 .trash {
     background: var(--gray-500);
     color: var(--gray-300);
