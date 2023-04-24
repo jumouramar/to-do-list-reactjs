@@ -23,7 +23,7 @@ export function List({tasks}) {
 
             <div className={styles.list}>
                 {tasks.map(task => {
-                    return <Task content={task} />
+                    return <Task key={task} content={task} />
                 })}
             </div>
 
