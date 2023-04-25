@@ -27,17 +27,20 @@ export function Task({ content, propDeleteTask, propCompletedTasksNumber, propSe
     return (
         <div className={styles.task}>
             <div>
-                <input 
-                    type="checkbox" 
-                    className="checkboxTask" 
-                    onChange={handleIsChecked} 
-                /> 
+                <label className={styles.checkcontainer}>
+                    <input 
+                        type="checkbox" 
+                        onChange={handleIsChecked} 
+                    /> 
+                    <span className={styles.checkmark}></span> 
+                </label>
                 <p className={isChecked ? styles.cross : styles.notCross}>
-                    {content}
+                     {content}
                 </p>
             </div>
+            
             <button onClick={handleDeleteTask} title="Deletar tarefa" className={styles.trash}>
-                <Trash size={20} />
+                <Trash size={17} />
             </button>
         </div>
     )
