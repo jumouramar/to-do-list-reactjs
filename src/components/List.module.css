@@ -1,19 +1,18 @@
-.tasks {
+.tasksContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     padding: 4rem 2rem;
 }
 
+.tasks {
+    width: 100%;
+    max-width: 46rem;
+}
+
 .info {
-    max-width: 736px;
     display: flex;
-    gap: 23rem;    
-    align-items: center;
-    color: var(--gray-200);
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 .info div {
@@ -24,6 +23,7 @@
 
 .info div p {
     background: var(--gray-400);
+    color: var(--gray-200);
     padding: 2px 8px;
     border: 0;
     border-radius: 999px;
@@ -39,19 +39,12 @@
 }
 
 .listEmpty {
-    width: 100%;
-    max-width: 736px;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-    margin: 1.5rem 0;
     padding: 4rem 0;
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
-
     line-height: 140%;
 }
 
@@ -59,4 +52,3 @@
     margin-top: 1rem;
     font-weight: 700;
 }
-
