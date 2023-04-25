@@ -13,7 +13,7 @@ export function App() {
 
   function handleAddNewTask() {
     event.preventDefault()
-    setTasks([...tasks, newTaskText])
+    setTasks([newTaskText, ...tasks])
     setNewTaskText('')
     setTasksNumber(tasksNumber+1)
   }
