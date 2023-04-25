@@ -25,3 +25,13 @@
     color: var(--gray-100);
     border: 1px solid var(--purple-dark);
 }
+
+@media screen and (max-width: 400px) {
+    .inputForm {
+        flex-direction: column;
+    }
+
+    .inputForm > textarea {
+        width: 100%;
+    }
+}

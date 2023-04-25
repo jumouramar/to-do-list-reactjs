@@ -46,6 +46,7 @@
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
     line-height: 140%;
+    text-align: center;
 }
 
 .listEmpty strong {
